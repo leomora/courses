@@ -6,7 +6,7 @@ job         : Johns Hopkins Bloomberg School of Public Health
 logo        : bloomberg_shield.png
 framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
 highlighter : highlight.js  # {highlight.js, prettify, highlight}
-hitheme     : tomorrow      # 
+hitheme     : tomorrow      #
 url:
   lib: ../../librariesNew
   assets: ../../assets
@@ -15,11 +15,15 @@ mode        : selfcontained # {standalone, draft}
 ---
 ## Statistical inference defined
 
-Statistical inference is the process of drawing formal conclusions from
-data. 
+Statistical inference involves formulating conclusions using data AND quantifying the uncertainty
+associated with those conclusions. The uncertainty could arise from incomplete or bad data.
 
 In our class, we wil define formal statistical inference as settings where one wants to infer facts about a population using noisy
 statistical data where uncertainty must be accounted for.
+
+We want to emphasize a couple of important points here.
+1. A statistic (singular) is a number computed from a sample of data. We use statistics to infer information about a population.
+2. A random variable is an outcome from an experiment. Deterministic processes, such as computing means or variances, applied to random variables, produce additional random variables which have their own distributions. It's important to keep straight which distributions you're talking about.
 
 ---
 
@@ -27,22 +31,22 @@ statistical data where uncertainty must be accounted for.
 
 In every major election, pollsters would like to know, ahead of the
 actual election, who's going to win. Here, the target of
-estimation (the estimand) is clear, the percentage of people in 
+estimation (the estimand) is clear, the percentage of people in
 a particular group (city, state, county, country or other electoral
 grouping) who will vote for each candidate.
 
-We can not poll everyone. Even if we could, some polled 
+We can not poll everyone. Even if we could, some polled
 may change their vote by the time the election occurs.
 How do we collect a reasonable subset of data and quantify the
 uncertainty in the process to produce a good guess at who will win?
 
 ---
 
-## Motivating example: is hormone replacement therapy effective? 
+## Motivating example: is hormone replacement therapy effective?
 
 A large clinical trial (the Women’s Health Initiative) published results in 2002 that contradicted prior evidence on the efficacy of hormone replacement therapy for post menopausal women and suggested a negative impact of HRT for several key health outcomes. **Based on a statistically based protocol, the study was stopped early due an excess number of negative events.**
 
-Here's there's two inferential problems. 
+Here's there's two inferential problems.
 
 1. Is HRT effective?
 2. How long should we continue the trial in the presence of contrary
@@ -74,13 +78,13 @@ or random sampling, or implicit as the aggregation of many complex uknown proces
 - Statistical inference requires navigating the set of assumptions and
 tools and subsequently thinking about how to draw conclusions from data.
 
---- 
+---
 ## Example goals of inference
 
-1. Estimate and quantify the uncertainty of an estimate of 
+1. Estimate and quantify the uncertainty of an estimate of
 a population quantity (the proportion of people who will
   vote for a candidate).
-2. Determine whether a population quantity 
+2. Determine whether a population quantity
   is a benchmark value ("is the treatment effective?").
 3. Infer a mechanistic relationship when quantities are measured with
   noise ("What is the slope for Hooke's law?")
@@ -89,22 +93,22 @@ a population quantity (the proportion of people who will
 
 
 ---
-## Example tools of the trade 
+## Example tools of the trade
 
 1. Randomization: concerned with balancing unobserved variables that may confound inferences of interest
-2. Random sampling: concerned with obtaining data that is representative 
+2. Random sampling: concerned with obtaining data that is representative
 of the population of interest
 3. Sampling models: concerned with creating a model for the sampling
 process, the most common is so called "iid".
 4. Hypothesis testing: concerned with decision making in the presence of uncertainty
-5. Confidence intervals: concerned with quantifying uncertainty in 
+5. Confidence intervals: concerned with quantifying uncertainty in
 estimation
 6. Probability models: a formal connection between the data and a population of interest. Often probability models are assumed or are
 approximated.
 7. Study design: the process of designing an experiment to minimize biases and variability.
 8. Nonparametric bootstrapping: the process of using the data to,
   with minimal probability model assumptions, create inferences.
-9. Permutation, randomization and exchangeability testing: the process 
+9. Permutation, randomization and exchangeability testing: the process
 of using data permutations to perform inferences.
 
 ---
@@ -114,7 +118,7 @@ We won't spend too much time talking about this, but there are several different
 styles of inference. Two broad categories that get discussed a lot are:
 
 1. Frequency probability: is the long run proportion of
- times an event occurs in independent, identically distributed 
+ times an event occurs in independent, identically distributed
  repetitions.
 2. Frequency inference: uses frequency interpretations of probabilities
 to control error rates. Answers questions like "What should I decide
@@ -125,14 +129,14 @@ a tolerable level."
 of beliefs to perform inference. Answers questions like "Given my subjective beliefs and the objective information from the data, what
 should I believe now?"
 
-Data scientists tend to fall within shades of gray of these and various other schools of inference. 
+Data scientists tend to fall within shades of gray of these and various other schools of inference.
 
 ---
 ## In this class
 
-* In this class, we will primarily focus on basic sampling models, 
+* In this class, we will primarily focus on basic sampling models,
 basic probability models and frequency style analyses
-to create standard inferences. 
+to create standard inferences.
 * Being data scientists,  we will also consider some inferential strategies that  rely heavily on the observed data, such as permutation testing
 and bootstrapping.
 * As probability modeling will be our starting point, we first build
@@ -146,7 +150,7 @@ on "finite population statistics". Used heavily in polling and
 sample surveys.
 2. Explicit use of randomization in inferences: look in references
 on "causal inference" especially in clinical trials.
-3. Bayesian probability and Bayesian statistics: look for basic itroductory books (there are many).
+3. Bayesian probability and Bayesian statistics: look for basic introductory books (there are many).
 4. Missing data: well covered in biostatistics and econometric
 references; look for references to "multiple imputation", a popular tool for
 addressing missing data.
@@ -155,4 +159,3 @@ addressing missing data.
   1. The epidemiological literature is very focused on using study design to investigate public health.
   2. The classical development of study design in agriculture broadly covers design and design principles.
   3. The industrial quality control literature covers design thoroughly.
- 
